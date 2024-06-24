@@ -45,6 +45,7 @@ ${DEVICE_DATA_SAVE_XPATH}    //button[@class='e-control e-btn e-lib e-control e-
 ${DEVICE_FACILITY_CHOOSE_XPATH}    //h4[.='Eszköz']
 ${DEVICE_CHOOSE_XPATH}    //li[@class='e-list-item e-item-focus']
 ${DEVICE_CLICK_HELP_XPATH}    //div[@id='Grid_dialogEdit_wrapper_dialog-content']
+${EXPORT_TO_EXCEL}    //span[.='Excel Export']
 
 # Other Variables
 ${BROWSER}    Chrome

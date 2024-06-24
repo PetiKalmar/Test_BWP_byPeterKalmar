@@ -238,6 +238,10 @@ Test Of Blue Water Pool System
 
     Click Element    ${DEVICE_DATA_SAVE_XPATH}
 
+# Thirteenth step of the Test, Click on the EXCEL export button
+
+    Click Element    ${EXPORT_TO_EXCEL}
+
 
 
 
