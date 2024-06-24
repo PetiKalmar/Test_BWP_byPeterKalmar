@@ -124,5 +124,11 @@ Test Of Blue Water Pool System
     ${facility_house}    Get Element Attribute    ${FACILITY_HOUSE_XPATH}    value
     Should Be Equal As Strings    ${facility_house}    ${EMPTY}
 
+    Sleep    5sec
+
+    # Eighth Step of the Test, Save the Form
+
+    Click Element    ${FACILITY_DATA_SAVE_XPATH}
+
 
     
