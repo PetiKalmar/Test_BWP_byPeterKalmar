@@ -266,6 +266,13 @@ Test Of Blue Water Pool System
 
     Click Element    ${SEARCH_FINAL_XPATH}
 
+    Sleep    5sec
+
+# Sixteenth step of the test: Click on the URL in the 'Street' field
+
+    Click Element    ${STREET_XPATH}
+
+    [Teardown]    Close Browser
 
 
 

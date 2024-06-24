@@ -48,6 +48,7 @@ ${DEVICE_CLICK_HELP_XPATH}    //div[@id='Grid_dialogEdit_wrapper_dialog-content'
 ${EXPORT_TO_EXCEL_XPATH}    //span[.='Excel Export']
 ${SEARCH_FACILITY_XPATH}    //input[@id='Grid_ToolbarSearchBox']
 ${SEARCH_FINAL_XPATH}    //span[@class='e-searchclear e-search-icon e-icons e-input-group-icon']
+${STREET_XPATH}    //*[@id="Grid_content_table"]/tbody/tr[1]/td[5]/div/div/a/span
 
 # Other Variables
 ${BROWSER}    Chrome
