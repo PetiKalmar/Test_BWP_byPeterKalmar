@@ -45,7 +45,9 @@ ${DEVICE_DATA_SAVE_XPATH}    //button[@class='e-control e-btn e-lib e-control e-
 ${DEVICE_FACILITY_CHOOSE_XPATH}    //h4[.='Eszköz']
 ${DEVICE_CHOOSE_XPATH}    //li[@class='e-list-item e-item-focus']
 ${DEVICE_CLICK_HELP_XPATH}    //div[@id='Grid_dialogEdit_wrapper_dialog-content']
-${EXPORT_TO_EXCEL}    //span[.='Excel Export']
+${EXPORT_TO_EXCEL_XPATH}    //span[.='Excel Export']
+${SEARCH_FACILITY_XPATH}    //input[@id='Grid_ToolbarSearchBox']
+${SEARCH_FINAL_XPATH}    //span[@class='e-searchclear e-search-icon e-icons e-input-group-icon']
 
 # Other Variables
 ${BROWSER}    Chrome

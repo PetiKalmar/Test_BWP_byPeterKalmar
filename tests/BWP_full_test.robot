@@ -242,7 +242,7 @@ Test Of Blue Water Pool System
 
 # Thirteenth step of the Test, Click on the EXCEL export button
 
-    Click Element    ${EXPORT_TO_EXCEL}
+    Click Element    ${EXPORT_TO_EXCEL_XPATH}
 
 # Fourteenth Step of the Test, Navigate to the Facilities menu
 
@@ -252,6 +252,19 @@ Test Of Blue Water Pool System
 
     Sleep    5sec
 
+# Fifteenth Step of the Test, Filter for the recorded facility in the 'Search' field
+
+    Click Element    ${SEARCH_FACILITY_XPATH}
+
+    Sleep    5sec
+
+    Input Text    ${SEARCH_FACILITY_XPATH}    ${CUSTOMER_NAME}
+    ${search_facility}    Get Element Attribute    ${SEARCH_FACILITY_XPATH}    value
+    Should Be Equal As Strings    ${search_facility}    ${CUSTOMER_NAME}
+
+    Sleep    5sec
+
+    Click Element    ${SEARCH_FINAL_XPATH}
 
 
 
