@@ -1,5 +1,8 @@
 *** Settings ***
+
+Documentation    Testing the Blue Water Pool Task and Equipment Registry System
 Library    SeleniumLibrary
+
 
 *** Variables ***
 
@@ -11,3 +14,6 @@ ${PARTNERS_BUTTON}    //a[contains(.,'Partnerek')]
 
 # Other Variables
 ${BROWSER}    Chrome
+
+
+*** Keywords ***
