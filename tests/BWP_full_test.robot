@@ -10,6 +10,8 @@ Open Application
     Open Browser    ${URL_HOMEPAGE}    ${BROWSER}
     Maximize Browser Window
 
+    Sleep    5sec
+
 # Second Step of the Test, Navigate to the Partners Menu
 Navigate To Partners
     Click Element    ${PARTNERS_BUTTON_XPATH}
@@ -52,6 +54,10 @@ Request The User Data With Api And Register Partner
     ${customer_comment}    Get Element Attribute    ${CUSTOMER_COMMENT_XPATH}    value
     Should Be Equal As Strings    ${customer_comment}    ${CUSTOMER_ID}    
 
-# Fourth Step of the Test, Register Partner based on the API message
+# Fifth Step of the Test, Save the Form
+
+    Sleep    5sec
+
+    Click Element    ${CUSTOMER_DATA_SAVE_XPATH}
 
     
