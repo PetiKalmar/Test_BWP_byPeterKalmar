@@ -30,6 +30,7 @@ ${FACILITY_HOUSE_XPATH}    //input[@id='szam']
 ${FACILITY_DATA_SAVE_XPATH}    //button[@class='e-control e-btn e-lib e-control e-btn e-lib e-primary e-flat']
 ${FACILITY_CLICK_HELP_XPATH}    //div[@id='Grid_dialogEdit_wrapper_title']
 ${FACILITY_CLICK_CHOOSE_XPATH}    //li[@class='e-list-item e-item-focus']
+${DEVICES_BUTTON_XPATH}    //a[contains(.,'Eszközök')]
 
 # Other Variables
 ${BROWSER}    Chrome

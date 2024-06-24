@@ -5,3 +5,5 @@ Input Text    ${ADDTOOL_NAME}    ${first_tool_manufacturer} ${first_tool_model}
     Input Text    ${ADDTOOL_COMM}    ${first_tool_comm}
 
     Sleep    3s
+    
+    # Ninth Step of the Test, Request Data for two Devices via the API

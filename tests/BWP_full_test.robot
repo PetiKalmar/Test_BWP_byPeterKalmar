@@ -130,5 +130,16 @@ Test Of Blue Water Pool System
 
     Click Element    ${FACILITY_DATA_SAVE_XPATH}
 
+    Sleep    5sec
+
+    # Tenth Step of the Test, Navigate to the Devices menu
+
+    Click Element    ${DEVICES_BUTTON_XPATH}
+
+    Sleep    5sec
+
+
+
+
 
     
