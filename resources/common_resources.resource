@@ -2,6 +2,7 @@
 
 Documentation    Testing the Blue Water Pool Task and Equipment Registry System
 Library    SeleniumLibrary
+Library    RequestsLibrary
 
 
 *** Variables ***

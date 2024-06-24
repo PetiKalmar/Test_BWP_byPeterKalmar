@@ -11,7 +11,11 @@ Open Application
     Maximize Browser Window
 
 # Second Step Of The Test Navigate To The Partners Menu
-Navigate to Partners
+Navigate To Partners
     Click Element    ${PARTNERS_BUTTON}
-    [Teardown]    Close Browser
+
+# Third Step Of The Test Request the User Data via the API
+Quick Get Request Test
+    ${response}=    GET    https://random-data-api.com/api/users/random_user
+
     
