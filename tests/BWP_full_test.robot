@@ -238,9 +238,20 @@ Test Of Blue Water Pool System
 
     Click Element    ${DEVICE_DATA_SAVE_XPATH}
 
+    Sleep    5sec
+
 # Thirteenth step of the Test, Click on the EXCEL export button
 
     Click Element    ${EXPORT_TO_EXCEL}
+
+# Fourteenth Step of the Test, Navigate to the Facilities menu
+
+    Sleep    5sec
+
+    Click Element    ${FACILITY_BUTTON_XPATH}
+
+    Sleep    5sec
+
 
 
 
