@@ -15,6 +15,7 @@ Open Application
 # Second Step of the Test, Navigate to the Partners Menu
 Navigate To Partners
     Click Element    ${PARTNERS_BUTTON_XPATH}
+
     Sleep    5sec
 
 # Third Step Of the Test, Request the User Data via the API
@@ -22,7 +23,6 @@ Request The User Data With Api And Register Partner
     ${response}    GET    ${URL_API_USERS}    params=size=1
 
 # Fourth Step of the Test, Register Partner based on the API message
-
     ${body}    Set Variable    ${response.json()}
     ${CUSTOMER_NAME}    Set Variable    ${body}[0][first_name] ${body}[0][last_name]
     ${CUSTOMER_MAIL}    Set Variable    ${body}[0][email]
@@ -59,5 +59,12 @@ Request The User Data With Api And Register Partner
     Sleep    5sec
 
     Click Element    ${CUSTOMER_DATA_SAVE_XPATH}
+
+# Sixth Step of the Test, Navigate to the Facilities Menu
+
+    Sleep    5sec
+
+    Click Element    ${FACILITY_BUTTON_XPATH}
+
 
     
