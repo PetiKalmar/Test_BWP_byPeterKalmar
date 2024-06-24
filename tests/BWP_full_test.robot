@@ -134,9 +134,114 @@ Test Of Blue Water Pool System
 
     # Tenth Step of the Test, Navigate to the Devices menu
 
-    Click Element    ${DEVICES_BUTTON_XPATH}
+    Click Element    ${DEVICE_BUTTON_XPATH}
 
     Sleep    5sec
+
+    # Ninth and Eleventh Steps of the Test, Request Data for two Devices via the API and Register the two received Devices to the Site recorded in Step 7
+
+    Click Element    ${ADD_DEVICE_XPATH}
+
+    Sleep    5sec
+
+    Click Element    ${DEVICE_CUSTOMER_BUTTON_XPATH}
+
+    Sleep    5sec
+
+    Click Element    ${DEVICE_CUSTOMER_TEXTBOX_XPATH}
+
+    Sleep    5sec
+    
+    Input Text    ${DEVICE_CUSTOMER_TEXTBOX_XPATH}    ${CUSTOMER_NAME}
+    ${customer_name}    Get Element Attribute    ${DEVICE_CUSTOMER_TEXTBOX_XPATH}    value
+    Should Be Equal As Strings    ${customer_name}    ${CUSTOMER_NAME}
+
+    Sleep    5sec
+
+    Click Element    ${DEVICE_CHOOSE_XPATH}
+
+    Sleep    5sec
+
+    Click Element    ${DEVICE_CLICK_HELP_XPATH}
+
+    Sleep    5sec
+
+    ${response}    GET    ${URL_API_DEVICE}    params=size=2
+
+    ${body}    Set Variable    ${response.json()}
+    ${DEVICE_NAME1}    Set Variable    ${body}[0][manufacturer] ${body}[0][model]
+    ${DEVICE_NAME2}    Set Variable    ${body}[1][manufacturer] ${body}[1][model]
+    ${DEVICE_PLATFORM1}    Set Variable    ${body}[0][platform]
+    ${DEVICE_PLATFORM2}    Set Variable    ${body}[1][platform]
+    ${DEVICE_SN1}    Set Variable    ${body}[0][serial_number]
+    ${DEVICE_SN2}    Set Variable    ${body}[1][serial_number]
+
+    Sleep    5sec
+
+    Input Text    ${DEVICE_NAME_XPATH}    ${DEVICE_NAME1}
+    ${device_name}    Get Element Attribute    ${DEVICE_NAME_XPATH}    value
+    Should Be Equal As Strings    ${device_name}    ${DEVICE_NAME1}
+
+    Sleep    5sec
+
+    Input Text    ${DEVICE_DESCRIPTION_XPATH}    ${DEVICE_PLATFORM1}
+    ${device_description}    Get Element Attribute    ${DEVICE_DESCRIPTION_XPATH}    value
+    Should Be Equal As Strings    ${device_description}    ${DEVICE_PLATFORM1}
+
+    Sleep    5sec
+
+    Input Text    ${DEVICE_COMMENT_XPATH}    ${DEVICE_SN1}
+    ${device_comment}    Get Element Attribute    ${DEVICE_COMMENT_XPATH}    value
+    Should Be Equal As Strings    ${device_comment}    ${DEVICE_SN1}
+
+    Sleep    5sec
+
+    Click Element    ${DEVICE_DATA_SAVE_XPATH}
+
+    Sleep    5sec
+
+    Click Element    ${ADD_DEVICE_XPATH}
+
+    Sleep    5sec
+
+    Click Element    ${DEVICE_FACILITY_BUTTON_XPATH}
+
+    Sleep    5sec
+
+    Click Element    ${DEVICE_CHOOSE_XPATH}
+
+    Sleep    5sec
+
+    Click Element    ${DEVICE_FACILITY_CHOOSE_XPATH}
+
+    Sleep    5sec
+
+    Input Text    ${DEVICE_NAME_XPATH}    ${DEVICE_NAME2}
+    ${device_name}    Get Element Attribute    ${DEVICE_NAME_XPATH}    value
+    Should Be Equal As Strings    ${device_name}    ${DEVICE_NAME2}
+
+    Sleep    5sec
+
+    Input Text    ${DEVICE_DESCRIPTION_XPATH}    ${DEVICE_PLATFORM2}
+    ${device_description}    Get Element Attribute    ${DEVICE_DESCRIPTION_XPATH}    value
+    Should Be Equal As Strings    ${device_description}    ${DEVICE_PLATFORM2}
+
+    Sleep    5sec
+
+    Input Text    ${DEVICE_COMMENT_XPATH}    ${DEVICE_SN2}
+    ${device_comment}    Get Element Attribute    ${DEVICE_COMMENT_XPATH}    value
+    Should Be Equal As Strings    ${device_comment}    ${DEVICE_SN2}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
