@@ -1,6 +1,7 @@
-*** Settings ***
-Library    RequestsLibrary
+Input Text    ${ADDTOOL_NAME}    ${first_tool_manufacturer} ${first_tool_model}
+    Input Text    ${ADDTOOL_CUSTOMER}    ${first_name} ${last_name}
+    Sleep    2s
+    Input Text    ${ADDTOOL_DESC}    ${first_tool_desc}
+    Input Text    ${ADDTOOL_COMM}    ${first_tool_comm}
 
-*** Test Cases ***
-Quick Get Request Test
-    ${response}=    GET    https://random-data-api.com/api/users/random_user
+    Sleep    3s
