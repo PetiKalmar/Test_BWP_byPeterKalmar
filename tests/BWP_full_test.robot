@@ -232,7 +232,11 @@ Test Of Blue Water Pool System
     ${device_comment}    Get Element Attribute    ${DEVICE_COMMENT_XPATH}    value
     Should Be Equal As Strings    ${device_comment}    ${DEVICE_SN2}
 
+    Sleep    5sec
 
+# Twelfth step of the Test, Save the Form
+
+    Click Element    ${DEVICE_DATA_SAVE_XPATH}
 
 
 
