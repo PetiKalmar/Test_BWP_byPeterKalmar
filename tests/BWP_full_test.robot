@@ -150,7 +150,7 @@ Test Of Blue Water Pool System
 
     Click Element    ${DEVICE_CUSTOMER_TEXTBOX_XPATH}
 
-    Sleep    3sec
+    Sleep    5sec
     
     Input Text    ${DEVICE_CUSTOMER_TEXTBOX_XPATH}    ${CUSTOMER_NAME}
     ${customer_name}    Get Element Attribute    ${DEVICE_CUSTOMER_TEXTBOX_XPATH}    value
