@@ -12,13 +12,13 @@ Test Of Blue Water Pool System
     Open Browser    ${URL_HOMEPAGE}    ${BROWSER}
     Maximize Browser Window
 
-    Sleep    5sec
+    # Sleep    5sec
 
 # Second Step of the Test, Navigate to the Partners Menu
 
     Click Element    ${PARTNERS_BUTTON_XPATH}
 
-    Sleep    5sec
+    Sleep    3sec
 
 # Third Step Of the Test, Request the User Data via the API
 
@@ -39,18 +39,18 @@ Test Of Blue Water Pool System
     ${customer_name}    Get Element Attribute    ${CUSTOMER_NAME_XPATH}    value
     Should Be Equal As Strings    ${customer_name}    ${CUSTOMER_NAME}
 
-    Sleep    5sec
+    #Sleep    5sec
 
     Input Text    ${CUSTOMER_MAIL_XPATH}    ${CUSTOMER_MAIL}
     ${customer_mail}    Get Element Attribute    ${CUSTOMER_MAIL_XPATH}    value
     Should Be Equal As Strings    ${customer_mail}    ${CUSTOMER_MAIL}
 
-    Sleep    5sec
+    #Sleep    5sec
 
     ${customer_phone}    Get Element Attribute    ${CUSTOMER_PHONE_XPATH}    value
     Should Be Equal As Strings    ${customer_phone}    ${EMPTY}
 
-    Sleep    5sec
+    #Sleep    5sec
 
     Input Text    ${CUSTOMER_COMMENT_XPATH}    ${CUSTOMER_ID}
     ${customer_comment}    Get Element Attribute    ${CUSTOMER_COMMENT_XPATH}    value
@@ -58,17 +58,17 @@ Test Of Blue Water Pool System
 
 # Fifth Step of the Test, Save the Form
 
-    Sleep    5sec
+    #Sleep    5sec
 
     Click Element    ${CUSTOMER_DATA_SAVE_XPATH}
 
 # Sixth Step of the Test, Navigate to the Facilities Menu
 
-    Sleep    5sec
+    Sleep    3sec
 
     Click Element    ${FACILITY_BUTTON_XPATH}
 
-    Sleep    5sec
+    Sleep    3sec
 
 # Seventh Step of the Test, Register Facility based on the API message
 
@@ -79,64 +79,64 @@ Test Of Blue Water Pool System
     Wait Until Element Is Visible    ${ADD_FACILITY_XPATH}
     Click Element    ${ADD_FACILITY_XPATH}
 
-    Sleep    5sec
+    Sleep    3sec
     
     Click Element    ${FACILITY_CUSTOMER_BUTTON_XPATH}
 
-    Sleep    5sec
+    #Sleep    5sec
 
     Click Element    ${FACILITY_CUSTOMER_TEXTBOX_XPATH}
 
-    Sleep    5sec
+    #Sleep    5sec
 
     Input Text    ${FACILITY_CUSTOMER_TEXTBOX_XPATH}    ${CUSTOMER_NAME}
     ${customer_name}    Get Element Attribute    ${FACILITY_CUSTOMER_TEXTBOX_XPATH}    value
     Should Be Equal As Strings    ${customer_name}    ${CUSTOMER_NAME}
     
-    Sleep    5sec
+    Sleep    3sec
 
     Click Element    ${FACILITY_CLICK_CHOOSE_XPATH}
 
-    Sleep    5sec
+    #Sleep    5sec
 
     Click Element    ${FACILITY_CLICK_HELP_XPATH}
 
-    Sleep    5sec
+    #Sleep    5sec
 
     Input Text    ${FACILITY_CITY_XPATH}    ${FACILITY_CITY}
     ${facility_city}    Get Element Attribute    ${FACILITY_CITY_XPATH}    value
     Should Be Equal As Strings    ${facility_city}    ${FACILITY_CITY}
 
-    Sleep    5sec
+    #Sleep    5sec
 
     Input Text    ${FACILITY_ZIP_XPATH}    ${FACILITY_ZIP}
     ${facility_zip}    Get Element Attribute    ${FACILITY_ZIP_XPATH}    value
     Should Be Equal As Strings    ${facility_zip}    ${FACILITY_ZIP}
 
-    Sleep    5sec
+    #Sleep    5sec
 
     Input Text    ${FACILITY_STREET_XPATH}    ${FACILITY_STREET}
     ${facility_street}    Get Element Attribute    ${FACILITY_STREET_XPATH}    value
     Should Be Equal As Strings    ${facility_street}    ${FACILITY_STREET}
 
-    Sleep    5sec
+    #Sleep    5sec
 
     ${facility_house}    Get Element Attribute    ${FACILITY_HOUSE_XPATH}    value
     Should Be Equal As Strings    ${facility_house}    ${EMPTY}
 
-    Sleep    5sec
+    #Sleep    5sec
 
     # Eighth Step of the Test, Save the Form
 
     Click Element    ${FACILITY_DATA_SAVE_XPATH}
 
-    Sleep    5sec
+    Sleep    3sec
 
     # Tenth Step of the Test, Navigate to the Devices menu
 
     Click Element    ${DEVICE_BUTTON_XPATH}
 
-    Sleep    5sec
+    Sleep    3sec
 
     # Ninth and Eleventh Steps of the Test, Request Data for two Devices via the API and Register the two received Devices to the Site recorded in Step 7
 
@@ -146,11 +146,11 @@ Test Of Blue Water Pool System
 
     Click Element    ${DEVICE_CUSTOMER_BUTTON_XPATH}
 
-    Sleep    5sec
+    #Sleep    5sec
 
     Click Element    ${DEVICE_CUSTOMER_TEXTBOX_XPATH}
 
-    Sleep    5sec
+    Sleep    3sec
     
     Input Text    ${DEVICE_CUSTOMER_TEXTBOX_XPATH}    ${CUSTOMER_NAME}
     ${customer_name}    Get Element Attribute    ${DEVICE_CUSTOMER_TEXTBOX_XPATH}    value
@@ -160,11 +160,11 @@ Test Of Blue Water Pool System
 
     Click Element    ${DEVICE_CHOOSE_XPATH}
 
-    Sleep    5sec
+    #Sleep    5sec
 
     Click Element    ${DEVICE_CLICK_HELP_XPATH}
 
-    Sleep    5sec
+    #Sleep    5sec
 
     ${response}    GET    ${URL_API_DEVICE}    params=size=2
 
@@ -176,69 +176,69 @@ Test Of Blue Water Pool System
     ${DEVICE_SN1}    Set Variable    ${body}[0][serial_number]
     ${DEVICE_SN2}    Set Variable    ${body}[1][serial_number]
 
-    Sleep    5sec
+    #Sleep    5sec
 
     Input Text    ${DEVICE_NAME_XPATH}    ${DEVICE_NAME1}
     ${device_name}    Get Element Attribute    ${DEVICE_NAME_XPATH}    value
     Should Be Equal As Strings    ${device_name}    ${DEVICE_NAME1}
 
-    Sleep    5sec
+    #Sleep    5sec
 
     Input Text    ${DEVICE_DESCRIPTION_XPATH}    ${DEVICE_PLATFORM1}
     ${device_description}    Get Element Attribute    ${DEVICE_DESCRIPTION_XPATH}    value
     Should Be Equal As Strings    ${device_description}    ${DEVICE_PLATFORM1}
 
-    Sleep    5sec
+    #Sleep    5sec
 
     Input Text    ${DEVICE_COMMENT_XPATH}    ${DEVICE_SN1}
     ${device_comment}    Get Element Attribute    ${DEVICE_COMMENT_XPATH}    value
     Should Be Equal As Strings    ${device_comment}    ${DEVICE_SN1}
 
-    Sleep    5sec
+    #Sleep    5sec
 
     Click Element    ${DEVICE_DATA_SAVE_XPATH}
 
-    Sleep    5sec
+    Sleep    3sec
 
     Click Element    ${ADD_DEVICE_XPATH}
 
-    Sleep    5sec
+    Sleep    3sec
 
     Click Element    ${DEVICE_FACILITY_BUTTON_XPATH}
 
-    Sleep    5sec
+    Sleep    3sec
 
     Click Element    ${DEVICE_CHOOSE_XPATH}
 
-    Sleep    5sec
+    #Sleep    5sec
 
     Click Element    ${DEVICE_FACILITY_CHOOSE_XPATH}
 
-    Sleep    5sec
+    #Sleep    5sec
 
     Input Text    ${DEVICE_NAME_XPATH}    ${DEVICE_NAME2}
     ${device_name}    Get Element Attribute    ${DEVICE_NAME_XPATH}    value
     Should Be Equal As Strings    ${device_name}    ${DEVICE_NAME2}
 
-    Sleep    5sec
+    #Sleep    5sec
 
     Input Text    ${DEVICE_DESCRIPTION_XPATH}    ${DEVICE_PLATFORM2}
     ${device_description}    Get Element Attribute    ${DEVICE_DESCRIPTION_XPATH}    value
     Should Be Equal As Strings    ${device_description}    ${DEVICE_PLATFORM2}
 
-    Sleep    5sec
+    #Sleep    5sec
 
     Input Text    ${DEVICE_COMMENT_XPATH}    ${DEVICE_SN2}
     ${device_comment}    Get Element Attribute    ${DEVICE_COMMENT_XPATH}    value
     Should Be Equal As Strings    ${device_comment}    ${DEVICE_SN2}
 
-    Sleep    5sec
+    #Sleep    5sec
 
 # Twelfth step of the Test, Save the Form
 
     Click Element    ${DEVICE_DATA_SAVE_XPATH}
 
-    Sleep    5sec
+    #Sleep    5sec
 
 # Thirteenth step of the Test, Click on the EXCEL export button
 
@@ -246,27 +246,27 @@ Test Of Blue Water Pool System
 
 # Fourteenth Step of the Test, Navigate to the Facilities menu
 
-    Sleep    5sec
+    #Sleep    5sec
 
     Click Element    ${FACILITY_BUTTON_XPATH}
 
-    Sleep    5sec
+    Sleep    3sec
 
 # Fifteenth Step of the Test, Filter for the recorded facility in the 'Search' field
 
     Click Element    ${SEARCH_FACILITY_XPATH}
 
-    Sleep    5sec
+    Sleep    3sec
 
     Input Text    ${SEARCH_FACILITY_XPATH}    ${CUSTOMER_NAME}
     ${search_facility}    Get Element Attribute    ${SEARCH_FACILITY_XPATH}    value
     Should Be Equal As Strings    ${search_facility}    ${CUSTOMER_NAME}
 
-    Sleep    5sec
+    #Sleep    5sec
 
     Click Element    ${SEARCH_FINAL_XPATH}
 
-    Sleep    5sec
+    #Sleep    5sec
 
 # Sixteenth step of the test: Click on the URL in the 'Street' field
 
