@@ -117,6 +117,44 @@ Documentation
 - `API documentation <http://robot-framework.readthedocs.org>`_
 - `General documentation <http://robotframework.org/>`_
 
+Strutcture
+----------
+
+example:
+
+my_project
+├── tests
+│   ├── suiteA.robot
+│   ├── suiteB.robot
+│   ├── ...
+│   
+├── resources
+│   ├── common.resource
+│   ├── some_other.resource
+│   ├── custom_library.py
+│   ├── variables.py
+│   ├── ...
+│
+├── .gitlab-ci.yml
+├── .gitignore
+├── README.md
+├── requirements.txt
+
+Our project structure:
+
+Test_BWP_byPeterKalmar
+├── tests
+│   ├── BWP_full_test.robot
+│   
+├── resources
+│   ├── common_resources.resource
+│
+├── results
+├── .gitignore
+├── README.md
+├── requirements.txt
+
+
 Support and Contact
 -------------------
 
